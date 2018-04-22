@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="guru99.DeleteCustomer">
+      <class name="strings.UpdateString">
         <methods>
-          <include name="accessLogin"/>
-          <include name="closeApp"/>
-          <include name="delete"/>
+          <include name="update"/>
         </methods>
-      </class> <!-- guru99.DeleteCustomer -->
+      </class> <!-- strings.UpdateString -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

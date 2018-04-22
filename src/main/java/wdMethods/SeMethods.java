@@ -149,6 +149,43 @@ public class SeMethods implements WdMethods{
 	}
 
 
+	public ArrayList<WebElement> locateElements(String atribute, String data){
+		ArrayList<WebElement> ele = null;
+		
+		try {
+			switch (atribute) {
+			case "id":
+				ele.addAll(driver.findElementsById(data));
+				break;
+			case "class":
+				ele.addAll(driver.findElementsByClassName(data));
+				break;
+			case "link text":
+				ele.addAll(driver.findElementsByLinkText(data));
+				break;
+			case "xpath":
+				ele.addAll(driver.findElementsByXPath(data));
+				break;
+			case "name":
+				ele.addAll(driver.findElementsByName(data));
+				break;
+			}
+		} catch (NoSuchElementException e) {
+			System.err.println("The element not found");
+			e.printStackTrace();
+			//throw new RuntimeException();
+		}
+		catch (Exception e) {
+			System.err.println("The element not found");
+			e.printStackTrace();
+		}
+		finally {
+			takeSnap();
+		}
+		return ele;
+		
+	}
+	
 	public void type(WebElement ele, String data) {
 		try {
 			ele.sendKeys(data);

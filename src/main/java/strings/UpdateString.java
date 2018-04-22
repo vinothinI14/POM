@@ -1,17 +1,19 @@
 package strings;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class UpdateString {
 	@Test
 	public void update() {
-		String input = "AB12C";
+		String input = "AB12C",output = "";
 		char[] charArray = input.toCharArray();
 		for(char each : charArray) {
 			int val= each;
 			each =(char) (val+1);
-			System.out.print(each);
+			
+		output=	output.concat(each+"");
 		}
+		System.out.println(output);
 	}
 
 }
