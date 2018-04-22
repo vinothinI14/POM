@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="10">
+  <test thread-count="5" name="Test">
+  <groups>
+  <run>
+  	<include name="smoke"></include>
+  	<include name="sanity"></include>
+  	<include name="regression"></include>
+  	<exclude name="sanity"></exclude>
+  	<include name="all"></include>
+  	</run>
+  </groups>
+    <classes>
+      <class name="week2.CreateLeads"/>
+      <class name="week2.MergeLeadSeM"/>
+      <class name="week2.DeleteSeM"/>
+      <class name="week2.DuplicateSeM"/>
+      <class name="week2.EditLeadSeM"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
