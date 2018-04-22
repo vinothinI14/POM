@@ -1,6 +1,10 @@
 package collections;
 
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+import javax.swing.event.TreeSelectionEvent;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -15,19 +19,15 @@ public class RedBus {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.redbus.in/");
-		driver.findElementById("src").sendKeys("Chennai",Keys.TAB);
-		driver.findElementById("dest").sendKeys("Bangalore",Keys.TAB);
+		driver.get("https://www.redbus.in/search?fromCityName=Chennai&fromCityId=123&toCityName=Bangalore&toCityId=122&onward=22-Apr-2018&opId=0&busType=Any");
+		List<WebElement> operators = driver.findElementsByClassName("service-name");
+		Set<String> tName= new TreeSet<String>();
+		for(WebElement op:operators)
+		{
+			tName.add(op.getText());
+		}
+		System.out.println(tName);
 		
-		driver.findElementById("onward_cal");
-		WebElement tableList = driver.findElementByClassName("monthTitle");
-		WebElement ele = tableList.findElement(By.xpath("//td[text()='22']"));
-		ele.click();
-				
-		driver.findElementById("search_btn").click();		
-		
-
-
 		driver.close();
 
 
