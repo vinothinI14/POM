@@ -16,6 +16,6 @@ public static void main(String[] args) {
 	System.out.println(str2);
 	str1=str1.substring(str2.length());
 	System.out.println("First String ="+str1 + "Second string ="+str2);
-	
+		
 }
 }

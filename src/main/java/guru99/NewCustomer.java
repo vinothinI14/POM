@@ -28,7 +28,7 @@ public class NewCustomer extends Login{
 		driver.findElementByName("state").sendKeys("Tamilnadu");
 		driver.findElementByName("pinno").sendKeys("600041");
 		driver.findElementByName("telephoneno").sendKeys("9087813922");
-		driver.findElementByName("emailid").sendKeys("vinoma1@gmail.com");
+		driver.findElementByName("emailid").sendKeys("vinoma19@gmail.com");
 		driver.findElementByName("password").sendKeys("VINOMA@1413");
 		driver.findElementByName("sub").click();
 		
