@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class EditLeadTestCase {
 
-	private static final int OutputType = 0;
+//	private static final int OutputType = 0;
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -76,7 +76,13 @@ public class EditLeadTestCase {
 		driver.findElementByClassName("smallSubmit").click();
 		
 		Thread.sleep(2000);
-	driver.close();
+		
+		String compVal = driver.findElementById("viewLead_companyName_sp").getText();
+//		String pattern
+		System.out.println(compVal.replaceAll("\\D", " "));
+		
+		
+//	driver.close();
 	
 		
 		

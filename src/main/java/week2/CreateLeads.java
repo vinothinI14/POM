@@ -16,7 +16,7 @@ import wdMethods.SeMethods;
 import week4.LearnRetry;
 
 public class CreateLeads extends ProjectMethods {
-	@Test(dataProvider="data")
+	/*@Test(dataProvider="data")*/
 	public void createLead(String cName, String fName, String lName)
 	{
 		/*startAppWithReturn("chrome", "http://www.leaftaps.com/opentaps/control/main");

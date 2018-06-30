@@ -20,7 +20,7 @@ public class MouseOver extends SeMethods {
 		WebElement charger = locateElement("xpath", "//span[text()='Chargers']");
 		Actions builder=new Actions(driver);
 		builder.moveToElement(ele).click().perform();
-		WebDriverWait wait=new WebDriverWait(driver, 10);
+		WebDriverWait wait=new WebDriverWait(driver, 10);   
 		wait.until(ExpectedConditions.visibilityOf(charger));
 		builder.click(charger).perform();
 

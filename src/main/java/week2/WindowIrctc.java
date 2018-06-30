@@ -27,13 +27,13 @@ public class WindowIrctc {
 		driver.get("https://www.irctc.co.in/eticketing/loginHome.jsf");
 		
 		driver.findElementByLinkText("Contact Us").click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		System.out.println(driver.getTitle());
 		Set<String> win = driver.getWindowHandles();
 		List<String> winList = new ArrayList<String>();
 		winList.addAll(win);
 		driver.switchTo().window(winList.get(1));
-		driver.close();
+		
 		System.out.println(driver.getTitle());
 		System.out.println(driver.findElementByXPath("//div[@class='content-ele']/p[2]").getText());
 		driver.switchTo().window(winList.get(0));

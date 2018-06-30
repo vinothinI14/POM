@@ -24,6 +24,7 @@ public class Dragabble extends SeMethods{
 		builder.doubleClick(drag).perform();
 		
 		
+		builder.contextClick().perform();
 		
 		
 	}

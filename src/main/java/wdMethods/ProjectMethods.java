@@ -9,32 +9,34 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
+import guru99.ReadFromExcel;
 import week2.LearnAnnotations;
 import week5.ReadFromXl;
 
 public class ProjectMethods extends LearnAnnotations{
-	@Parameters({"username","password"})
-	@BeforeMethod(groups="all")
-	public WebDriver login( String username, String password)
+	
+	@BeforeMethod
+	public WebDriver login()
 	{
-		RemoteWebDriver driver = startAppWithReturn("chrome","http://www.leaftaps.com/opentaps/control/main");
-		type(locateElement("id", "username"),username);
+		String url="http://live.guru99.com/index.php/";
+		RemoteWebDriver driver = startAppWithReturn("chrome",url);
+		/*type(locateElement("id", "username"),username);
 		type(locateElement("id", "password"),password);
 		click(locateElement("class", "decorativeSubmit"));
 		click(locateElement("link text", "CRM/SFA"));
-		click(locateElement("link text", "Leads"));
+		click(locateElement("link text", "Leads"));*/
 		return driver;
 	}
 	
-	@AfterMethod(groups="all")
+	@AfterMethod
 	public void closeApp()
 	{
 		closeBrowser();
 	}
-	@DataProvider(name = "data")
+	@DataProvider(name = "fetchData")
 	public Object getdata() throws IOException {
-		ReadFromXl read = new ReadFromXl();
-		Object data = read.readExcel();
+		ReadFromExcel read = new ReadFromExcel();
+		Object data = read.data();
 		
 		return data;
 }

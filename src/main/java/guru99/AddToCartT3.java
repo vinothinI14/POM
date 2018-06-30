@@ -1,25 +1,24 @@
 package guru99;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import java.io.IOException;
 
-import org.junit.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Parameters;
 
-public class AddToCartT3 {
+import wdMethods.ProjectMethods;
+
+public class AddToCartT3 extends ProjectMethods{
 	
 	@Test
+	
 	public void cart() throws IOException
 	{
 		
-		System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
-		ChromeDriver driver=new ChromeDriver();
-		
-		driver.manage().window().maximize();
-		
-		//launch URL
-		driver.get("http://live.guru99.com/index.php/");
 		
 		//Click on mobile
 		driver.findElementByXPath("//a[text()='Mobile']").click();

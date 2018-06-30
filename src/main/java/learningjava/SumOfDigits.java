@@ -16,6 +16,7 @@ public static void main(String[] args) {
 		inputNumber=inputNumber/10;
 		
 	}
+	
 System.out.println("sumofdigits  "+ number +"is"+ sumofdigit);
 }
 

@@ -10,6 +10,7 @@ public class PrimeNumber {
 		System.out.println("Enter the number to check ....");
 		Scanner num=new Scanner(System.in);
 		number=num.nextInt();
+		
 		for(a=1;a<=number;a++)
 		{
 		if(number%a==0)
@@ -17,7 +18,9 @@ public class PrimeNumber {
 			temp++;
 			
 		}
+		
 		}
+		
 	if(temp==2)
 		
 		{

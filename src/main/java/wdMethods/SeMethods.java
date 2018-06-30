@@ -33,7 +33,6 @@ public class SeMethods implements WdMethods{
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 			driver = new ChromeDriver();
-
 		}else if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
@@ -151,7 +150,7 @@ public class SeMethods implements WdMethods{
 
 	public ArrayList<WebElement> locateElements(String atribute, String data){
 		ArrayList<WebElement> ele = null;
-		
+
 		try {
 			switch (atribute) {
 			case "id":
@@ -183,9 +182,9 @@ public class SeMethods implements WdMethods{
 			takeSnap();
 		}
 		return ele;
-		
+
 	}
-	
+
 	public void type(WebElement ele, String data) {
 		try {
 			ele.sendKeys(data);
@@ -246,7 +245,7 @@ public class SeMethods implements WdMethods{
 			System.err.println("webDriver Exception");
 			e.printStackTrace();
 		}
-		
+
 
 	}
 
@@ -404,7 +403,7 @@ public class SeMethods implements WdMethods{
 			e.printStackTrace();
 		}finally
 		{
-		takeSnap();
+			takeSnap();
 		}
 	}
 
@@ -476,11 +475,11 @@ public class SeMethods implements WdMethods{
 			e.printStackTrace();
 		}
 	}
-	
-	
+
+
 	public static void firstResLeadId(String leadId)
 	{
-		
+
 	}
 
 	public void closeBrowser() {

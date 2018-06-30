@@ -26,7 +26,7 @@ public class IrctcLoginJava {
 		//Implicit wait
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		
+	
 		
 		//Launch URL
 		driver.get("https://www.irctc.co.in/eticketing/loginHome.jsf");
@@ -35,6 +35,8 @@ public class IrctcLoginJava {
 		//Click on Sign up
 		driver.findElementByLinkText("Sign up").click();
 
+		
+		
 		//Enter the userID
 		driver.findElementById("userRegistrationForm:userName").sendKeys("Vinothini");
 
@@ -47,6 +49,7 @@ public class IrctcLoginJava {
 		WebElement seq = driver.findElementById("userRegistrationForm:securityQ");
 		Select dri=new Select(seq);
 		dri.selectByIndex(2);
+		
 		Thread.sleep(2000);
 		
 		//Answer for the sq ques

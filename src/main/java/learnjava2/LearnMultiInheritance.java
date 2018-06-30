@@ -15,6 +15,7 @@ public class LearnMultiInheritance {
 		
 	}
 }
+
 class B extends LearnMultiInheritance
 {
 	private int salary;
@@ -27,6 +28,7 @@ class B extends LearnMultiInheritance
 		System.out.println(cName);
 		
 	}
+	@Override
 	public void cName()
 	{
 		/*System.out.println("Enter the company");
